@@ -257,7 +257,7 @@ def standardconf():
   </div>
 
   [lastupdated]
-# Page generated on |.
+  # Page generated on |.
 
   [sourcelink]
 
