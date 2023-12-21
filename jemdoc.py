@@ -22,12 +22,14 @@
 # latexmath2png, by Kamil Kisiel (kamil@kamikisiel.net).
 #
 
+from __future__ import print_function
 import sys
 import os
 import re
 import time
 import io
 from subprocess import *
+from types import *
 import tempfile
 
 def info():
@@ -258,8 +260,7 @@ def standardconf():
   
   [lastupdated]
   # <a href="https://www.revolvermaps.com/livestats/5mr7vm7gajb/"><img src="//rf.revolvermaps.com/h/m/a/0/ff0000/128/0/5mr7vm7gajb.png" width="256" height="128" alt="Map" style="border:0;"></a>
-
-  # Page generated |, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+  # Page generated |, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
 
   [sourcelink]
   # (<a href="|">source</a>)

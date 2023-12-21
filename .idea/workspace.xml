@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ed5dbbc0-9ae9-467f-9681-bcc9a2b22982" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/CV.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/files/CV.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.jemdoc" beforeDir="false" afterPath="$PROJECT_DIR$/index.jemdoc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jemdoc.py" beforeDir="false" afterPath="$PROJECT_DIR$/jemdoc.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,5 +36,11 @@
       <updated>1694098075261</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2481" y="469" width="672" height="678" key="search.everywhere.popup" timestamp="1702134292420">
+      <screen x="1920" y="192" width="1920" height="1032" />
+    </state>
+    <state x="2481" y="469" width="672" height="678" key="search.everywhere.popup/5760.0.1152.1990/1920.192.1920.1032/0.0.1280.672@1920.192.1920.1032" timestamp="1702134292420" />
   </component>
 </project>
