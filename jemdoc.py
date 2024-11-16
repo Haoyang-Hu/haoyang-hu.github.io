@@ -250,8 +250,7 @@ def standardconf():
   [footerstart]
   <div id="footer">
   <div id="footer-text">
-    <a href="https://clustrmaps.com/site/1bwbw"  title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=vwuYA46ueCRnAY2HAaRuWXqOmT5gcfC_t3-mQ4w56lc&cl=ffffff" /></a>
-  #  <a href="https://www.revolvermaps.com/livestats/5k5tpmh2zi1/"><img src="//rf.revolvermaps.com/h/m/a/0/ff0000/128/0/5k5tpmh2zi1.png" width="256" height="128" alt="Map" style="border:0;"></a>
+  <a href="https://clustrmaps.com/site/1bwbw" title="Visit tracker"><img src="//clustrmaps.com/map_v2.png?cl=ffffff&w=200&t=n&d=vwuYA46ueCRnAY2HAaRuWXqOmT5gcfC_t3-mQ4w56lc" /></a>  #  <a href="https://www.revolvermaps.com/livestats/5k5tpmh2zi1/"><img src="//rf.revolvermaps.com/h/m/a/0/ff0000/128/0/5k5tpmh2zi1.png" width="256" height="128" alt="Map" style="border:0;"></a>
   #  <a href="https://www.revolvermaps.com/livestats/5kr5e88epf1/"><img src="//rf.revolvermaps.com/w/3/s/a/10/0/2/ffffff/010020/aa0000/5kr5e88epf1.png" alt="Stats" style="border:0;"></a>
   #  <a href="http://s11.flagcounter.com/more/jD"><img src="https://s11.flagcounter.com/mini/jD/bg_FFFFFF/txt_000000/border_CCCCCC/flags_0/" alt="Flag Counter" border="0"></a>
   
