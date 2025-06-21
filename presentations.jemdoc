@@ -1,4 +1,4 @@
-# jemdoc: menu{MENU}{talks.html}, nofooter
+# jemdoc: menu{MENU}{presentations.html}, nofooter
 = Talks
 
 . "Differentially Private Secure Multiplication with Erasures and Adversaries", North American School of Information Theory, Minneapolis, US, June 2025 (Poster).
