@@ -1,8 +1,11 @@
 # jemdoc: menu{MENU}{presentations.html}, nofooter
 = Presentations
 
-. "Differentially Private Secure Multiplication with Erasures and Adversaries", IEEE International Symposium on Information Theory, Ann Arbor, USA, June 2025 (Oral).
-. "Differentially Private Secure Multiplication with Erasures and Adversaries", North American School of Information Theory, Minneapolis, USA, June 2025 (Poster).
-. "Differentially Private Secure Multiplication with Erasures and Adversaries", Theory and Practice of Differential Privacy, Mountain View, USA, June 2025 (Poster).
-. "Coded Distributed Computing for Hierarchical Multi-task Learning", IEEE Information Theory Workshop, Saint-Malo, France, April 2023 (Oral).
-. "Communication-Efficient Coded Distributed Multi-Task Learning", IEEE Global Communications Conference, Madrid, Spain, December 2021 (Oral, online).
+- Differentially Private Secure Multiplication with Erasures and Adversaries
+-- IEEE International Symposium on Information Theory, Ann Arbor, USA, June 2025 (Oral)
+-- North American School of Information Theory, Minneapolis, USA, June 2025 (Poster)
+-- Theory and Practice of Differential Privacy, Mountain View, USA, June 2025 (Poster)
+- Coded Distributed Computing for Hierarchical Multi-task Learning
+-- IEEE Information Theory Workshop, Saint-Malo, France, April 2023 (Oral)
+- Communication-Efficient Coded Distributed Multi-Task Learning
+-- IEEE Global Communications Conference, Madrid, Spain, December 2021 (Oral, online）
