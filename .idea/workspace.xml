@@ -21,10 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ed5dbbc0-9ae9-467f-9681-bcc9a2b22982" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.jemdoc" beforeDir="false" afterPath="$PROJECT_DIR$/index.jemdoc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publications.html" beforeDir="false" afterPath="$PROJECT_DIR$/publications.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publications.jemdoc" beforeDir="false" afterPath="$PROJECT_DIR$/publications.jemdoc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentations.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentations.jemdoc" beforeDir="false" afterPath="$PROJECT_DIR$/presentations.jemdoc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teaching.jemdoc" beforeDir="false" afterPath="$PROJECT_DIR$/teaching.jemdoc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
