@@ -250,7 +250,7 @@ def standardconf():
   [footerstart]
   <div id="footer">
   <div id="footer-text">
-  <a href="https://clustrmaps.com/site/1bwbw"  title="ClustrMaps"><img src="//www.clustrmaps.com/map_v2.png?d=vwuYA46ueCRnAY2HAaRuWXqOmT5gcfC_t3-mQ4w56lc&cl=ffffff" /></a>
+  <a href="https://info.flagcounter.com/XMPX"><img src="https://s01.flagcounter.com/mini/XMPX/bg_FFFFFF/txt_000000/border_CCCCCC/flags_0/" alt="Flag Counter" border="0"></a>
   #  <a href="https://www.revolvermaps.com/livestats/5kr5e88epf1/"><img src="//rf.revolvermaps.com/w/3/s/a/10/0/2/ffffff/010020/aa0000/5kr5e88epf1.png" alt="Stats" style="border:0;"></a>
   #  <a href="http://s11.flagcounter.com/more/jD"><img src="https://s11.flagcounter.com/mini/jD/bg_FFFFFF/txt_000000/border_CCCCCC/flags_0/" alt="Flag Counter" border="0"></a>
   
@@ -657,9 +657,9 @@ def br(b, f, tableblock=False):
   for m in r.findall(b):
     repl = os.environ.get(m)
     if repl == None:
-      b = re.sub("!\$%s\$!" % m, 'FAILED_MATCH_' + m, b)
+      b = re.sub(r"!\$%s\$!" % m, 'FAILED_MATCH_' + m, b)
     else:
-      b = re.sub("!\$%s\$!" % m, repl, b)
+      b = re.sub(r"!\$%s\$!" % m, repl, b)
 
   # Deal with literal backspaces.
   if f.eqs and f.eqsupport:
@@ -828,7 +828,7 @@ def gethl(lang):
     d['special'] = ['cols', 'optvar', 'param', 'problem', 'norm2', 'norm1',
             'value', 'minimize', 'maximize', 'rows', 'rand',
             'randn', 'printval', 'matrix']
-    d['error'] = ['\w*Error',]
+    d['error'] = [r'\w*Error',]
     d['commentuntilend'] = '#'
     d['strings'] = True
   elif lang in ['c', 'c++', 'cpp']:
@@ -837,7 +837,7 @@ def gethl(lang):
             'clock_t', 'struct', 'long', 'extern', 'char']
     d['operator'] = ['#include.*', '#define', '@pyval{', '}@', '@pyif{',
              '@py{']
-    d['error'] = ['\w*Error',]
+    d['error'] = [r'\w*Error',]
     d['commentuntilend'] = ['//', '/*', ' * ', '*/']
   elif lang in ('rb', 'ruby'):
     d['statement'] = putbsbs(['while', 'until', 'unless', 'if', 'elsif',
@@ -846,7 +846,7 @@ def gethl(lang):
     d['operator'] = putbsbs(['and', 'not', 'or'])
     d['builtin'] = putbsbs(['true', 'false', 'require', 'warn'])
     d['special'] = putbsbs(['IO'])
-    d['error'] = putbsbs(['\w*Error',])
+    d['error'] = putbsbs([r'\w*Error',])
     d['commentuntilend'] = '#'
     d['strings'] = True
     d['strings'] = True
@@ -864,13 +864,13 @@ def gethl(lang):
     d['builtin'] = putbsbs(['gem', 'gcc', 'python', 'curl', 'wget', 'ssh',
                 'latex', 'find', 'sed', 'gs', 'grep', 'tee',
                 'gzip', 'killall', 'echo', 'touch',
-                'ifconfig', 'git', '(?<!\.)tar(?!\.)'])
+                'ifconfig', 'git', r'(?<!\.)tar(?!\.)'])
     d['commentuntilend'] = '#'
     d['strings'] = True
   elif lang == 'matlab':
     d['statement'] = putbsbs(['max', 'min', 'find', 'rand', 'cumsum', 'randn', 'help',
                      'error', 'if', 'end', 'for'])
-    d['operator'] = ['&gt;', 'ans =', '>>', '~', '\.\.\.']
+    d['operator'] = ['&gt;', 'ans =', '>>', '~', r'\.\.\.']
     d['builtin'] = putbsbs(['csolve'])
     d['commentuntilend'] = '%'
     d['strings'] = True
@@ -962,14 +962,14 @@ def geneq(f, eq, dpi, wl, outname):
   basefile = texfile[:-4]
   g = os.fdopen(fd, 'wb')
 
-  preamble = '\documentclass{article}\n'
+  preamble = '\\documentclass{article}\n'
   for p in f.eqpackages:
     preamble += '\\usepackage{%s}\n' % p
   for p in f.texlines:
     # Replace \{ and \} in p with { and }.
     # XXX hack.
     preamble += re.sub(r'\\(?=[{}])', '', p + '\n')
-  preamble += '\pagestyle{empty}\n\\begin{document}\n'
+  preamble += '\\pagestyle{empty}\n\\begin{document}\n'
   g.write(preamble)
   
   # Write the equation itself.
@@ -979,7 +979,7 @@ def geneq(f, eq, dpi, wl, outname):
     g.write('$%s$' % eq)
 
   # Finish off the tex file.
-  g.write('\n\\newpage\n\end{document}')
+  g.write('\n\\newpage\n\\end{document}')
   g.close()
 
   exts = ['.tex', '.aux', '.dvi', '.log']
@@ -1129,7 +1129,7 @@ def codeblock(f, g):
         out(f.outf, l)
       elif g[1] == 'jemdoc':
         # doing this more nicely needs python 2.5.
-        for x in ('#', '~', '>>>', '\~', '{'):
+        for x in ('#', '~', '>>>', r'\~', '{'):
           if str(l).lstrip().startswith(x):
             out(f.outf, '</tt><pre class="tthl">')
             out(f.outf, l + '</pre><tt class="tthl">')
@@ -1354,13 +1354,13 @@ def procfile(f):
       # Quickly pull out the equation here:
       # Check we don't already have the terminating character in a whole-line
       # equation without linebreaks, eg \( Ax=b \):
-      if not s.strip().endswith('\)'):
+      if not s.strip().endswith(r'\)'):
         while True:
           l = nl(f, codemode=True)
           if not l:
             break
           s += l
-          if l.strip() == '\)':
+          if l.strip() == r'\)':
             break
       out(f.outf, br(s.strip(), f))
 
